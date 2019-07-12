@@ -18,7 +18,7 @@ domanually = False
 def scale_to_width(dimensions, width):
     height = (width * dimensions[1]) / dimensions[0]
 
-    return (width, height)
+    return (int(width), int(height))
 
 
 def stitchfiles(jsonfile, outfile, size):
@@ -55,6 +55,18 @@ def stitchfiles(jsonfile, outfile, size):
                     else:
                         print("Skipping \"" + file + "\": Not needed.")
                         size["x"] -= size["in"]
+                elif len(fileargs) > 2 and fileargs[1] == "bed":
+                    rel = size["in"] / 16
+                    if fileargs[2] == "top":
+                        pos = (rel*6, rel*6, rel*21, rel*21)
+                    elif fileargs[2] == "bottom":
+                        pos = (rel*6, rel*28, rel*21, rel*43)
+                        pass
+                    else:
+                        pos = (6,6,21,21)
+                    img = img.crop(pos)
+                    img = img.rotate(-90)
+                    terrain.paste(img, (size["x"], size["y"]))
                 elif x == y and not len(fileargs) > 1:
                     img.resize(scale_to_width(img.size, size["x"]), PIL.Image.NEAREST)
                     terrain.paste(img, (size["x"], size["y"]))
