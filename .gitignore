@@ -1,6 +1,9 @@
 
 \.idea/
 __pycache__/
-textures/
+debugtextures/
 resources/
+resourcepack/
 test/
+
+terrain\.png
