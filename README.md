@@ -1,17 +1,18 @@
 # PyMCRTPC
 Python Minecraft Resource to Texture Pack Converter.  
-**Because I suck at names.**
+**Because I suck at names.**  
+<sup>Try pronouncing it.</sup>
 
 ### Features
 - Takes any minecraft 1.6> resource pack.
 - Puts any textures that exist in 1.4.7< into various stitched texture files.
 - These can then be used as a texturepack for 1.4.7<.  
+- Supports HD texturepacks!
 
 Thats it.
 
 ### Caveats
-- Anything other than 16x16 resourcepacks are not supported!
-- 1.5.* is not supported due to wierd texture madness.
+- 1.5.* is not supported due to weird texture madness.
 - If you want to convert a texturepack into a resourcepack, you will want to use [TextureEnder](http://s3.amazonaws.com/Minecraft.Download/utilities/TextureEnder.jar).
 
 ### Requirements
