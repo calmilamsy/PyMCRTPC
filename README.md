@@ -19,3 +19,9 @@ Thats it.
 - Python 3 or above.
 - A toaster that doesnt overheat.
 - 10 minutes of time.
+
+### Usage
+1. Extract your resourcepack into a folder named `resourcepack`.
+2. Install `pillow` onto your python 3 install (`pip`|`pip3 install pillow`).
+3. Run main.py with python 3.
+4. Output will be in `items.png` and `terrain.png`.
