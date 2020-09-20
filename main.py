@@ -33,7 +33,8 @@ def stitchfiles(jsonfile, outfile, size):
             fileargs = file.split(":")
             file = fileargs[0]
             chistory = True
-            file = "textures" + file
+            if file != "blank":
+                file = "resourcepack" + file
             if file.endswith(".png") and os.path.isfile(file):
                 img = PIL.Image.open(file)
                 x, y = img.size
